@@ -1,0 +1,177 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>User SignUp</title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+</head>
+<body>
+    <div class="login_nav" >
+      <!-- header section strats -->
+      <header class="header_section">
+        <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+            <a class="navbar-brand" href="{% static 'index.html' %}">
+              <img src="{% static 'images/logo.png' %}" alt="" />
+              <span>
+                Seva
+              </span>
+            </a>
+          </nav>
+        </div>
+      </header>
+    </div>
+    <section class="experience_section " >
+      <div class="container floating" >
+        <div class="row">
+          <div class="col-md-6" style="margin-left: 40px;">
+            <div class="img-box">
+              <img src="{% static 'images/user-signup.png' %}" alt="">
+            </div>
+          </div>
+          </div>
+          </div>
+      </section>
+
+    <h2  class="signup-heading">SignUp</h2>
+    <style>
+      h5{margin-left: 800px;
+        color:red;
+      }
+    </style>
+    {% for message in messages %}
+    <h5>{{message}}</h5>
+    {% endfor %}
+    <form class="form-group" method="POST" action="user_signup">
+      {% csrf_token %}
+      <div>
+        <label for="exampleInputName">Username</label>
+        <input type="text" class="form-control" name="username"  placeholder="Enter username">
+      </div>
+      <br>
+      <div>
+        <label for="exampleInputName">First Name</label>
+        <input type="text" class="form-control" name="firstname"  placeholder="Enter first name">
+      </div>
+      <br>
+      <div>
+        <label for="exampleInputName">Last Name</label>
+        <input type="text" class="form-control" placeholder="Enter last name" name="lastname">
+      </div>
+      <br>
+      
+        <div>
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email">
+        </div>
+        <br>
+        <div>
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
+        </div>
+        <br>
+        <div>
+          <label for="exampleInputPassword2">Confirm Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" name="password2">
+        </div>
+       <!-- <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>-->
+        <br>
+        <div>
+          <label for="inputAddress">Address</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="Your address" name="address">
+        </div>
+        <br>
+        <div class="form-row">
+          <div class="col-md-6">
+            <label for="inputCity">City</label>
+            <input type="text" class="form-control" id="inputCity" name="city">
+          </div>
+          <div class="col-md-4">
+            <label for="inputState">State</label>
+            <select id="inputState" class="form-control" name="state">
+              
+              <option value="">Select state</option>
+    <option value="AN">Andaman and Nicobar Islands</option>
+    <option value="AP">Andhra Pradesh</option>
+    <option value="AR">Arunachal Pradesh</option>
+    <option value="AS">Assam</option>
+    <option value="BR">Bihar</option>
+    <option value="CH">Chandigarh</option>
+    <option value="CT">Chhattisgarh</option>
+    <option value="DN">Dadra and Nagar Haveli</option>
+    <option value="DD">Daman and Diu</option>
+    <option value="DL">Delhi</option>
+    <option value="GA">Goa</option>
+    <option value="GJ">Gujarat</option>
+    <option value="HR">Haryana</option>
+    <option value="HP">Himachal Pradesh</option>
+    <option value="JK">Jammu and Kashmir</option>
+    <option value="JH">Jharkhand</option>
+    <option value="KA">Karnataka</option>
+    <option value="KL">Kerala</option>
+    <option value="LA">Ladakh</option>
+    <option value="LD">Lakshadweep</option>
+    <option value="MP">Madhya Pradesh</option>
+    <option value="MH">Maharashtra</option>
+    <option value="MN">Manipur</option>
+    <option value="ML">Meghalaya</option>
+    <option value="MZ">Mizoram</option>
+    <option value="NL">Nagaland</option>
+    <option value="OR">Odisha</option>
+    <option value="PY">Puducherry</option>
+    <option value="PB">Punjab</option>
+    <option value="RJ">Rajasthan</option>
+    <option value="SK">Sikkim</option>
+    <option value="TN">Tamil Nadu</option>
+    <option value="TG">Telangana</option>
+    <option value="TR">Tripura</option>
+    <option value="UP">Uttar Pradesh</option>
+    <option value="UT">Uttarakhand</option>
+    <option value="WB">West Bengal</option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <label for="inputZip">Zip</label>
+            <input type="text" class="form-control" id="inputZip" name="zip">
+          </div>
+        </div>
+        <br>
+       
+        <button type="submit" class="btn btn-outline-primary">Submit</button>
+        <a href="{% static 'user_login.html' %}" class="login-link" >Login</a>
+      </form>
+    
+       
+       
+        <!-- end  footer section -->
+       
+      
+        <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.js' %}"></script>
+        <script src="{% static 'js/custom.js' %}"></script>
+      
+      
+</body>
+</html>

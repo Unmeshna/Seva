@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>SignUp</title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+</head>
+<body>
+    <div class="login_nav">
+      <!-- header section strats -->
+      <header class="header_section">
+        <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+            <a class="navbar-brand" href="index">
+              <img src="{% static 'images/logo.png' %}" alt="" />
+              <span>
+                Seva
+              </span>
+            </a>
+          </nav>
+        </div>
+      </header>
+    </div>
+    <section class="experience_section" style="margin-left:500px;">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-5">
+              <div class="img-box">
+                <img src="{% static 'images/register.png' %}" alt="">
+              </div>
+            </div>
+            </div>
+            </div>
+        </section>
+<h2 class="register-heading">Register As?</h2>
+    <a href="professional_signup" class="btn btn-outline-primary pro-btn">Professional</a>
+    <a href="user_signup" class="btn btn-outline-primary use-btn">User</a>
+
+    
+    
+    <footer class="container-fluid footer_section ">
+        <div class="container">
+          <p>
+            &copy; <span id="displayDate"></span> All Rights Reserved
+          </p>
+        </div>
+      </footer>
+      <!-- end  footer section -->
+    
+    
+      <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+      <script src="{% static 'js/bootstrap.js' %}"></script>
+      <script src="{% static 'js/custom.js' %}"></script>
+    
+    
+    
+</body>
+</html>
